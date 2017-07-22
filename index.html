@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GOT">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game of Thrones</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet" >
+  </head>
+  <body>
+
+    <div class="container">
+      <!--Navbar-->
+          <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-header">
+              <a href="#" class="navbar-brand logo">Game Of Thrones</a>
+              <button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class=" navbar-collapse collapse" id="menu">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a data-toggle="collapse" data-target=".navbar-collapse.in" ng-href="#">Home</a></li>
+              </ul>
+            </div>
+          </div><!--end of navbar-->
+      <div class="row" style="margin-top:100px;">
+      </div>
+
+    <div ng-view></div>
+    </div>
+
+  <script src="vendor/jquery.min.js"></script>
+  <script src="vendor/bootstrap.js"></script>
+  <script src="vendor/angular.js"></script>
+  <script src="vendor/angular-route.js"></script>
+
+  <script src="angular/app.js"></script>
+  <script src="angular/controllers/displayAll.js"></script>
+  <script src="angular/controllers/displayBook.js"></script>
+  <script src="angular/controllers/displayCharacter.js"></script>
+  <script src="angular/controllers/displayHouse.js"></script>
+  <script src="angular/services/getDataFactory.js"></script>
+  <script src="angular/routes.js"></script>
+  <script src="angular/directives/showBooks.js"></script>
+  <script src="angular/directives/showCharacters.js"></script>
+  <script src="angular/directives/showHouses.js"></script>
+  <script src="angular/directives/showLinks.js"></script>
+  </body>
+</html>

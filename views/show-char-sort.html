@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-6 col-sm-3">
+    <input ng-model="display.search" placeholder="Search Character">
+  </div>
+  <div class="col-xs-6 col-sm-3">
+    <button class="btn col-xs-12 sort-button" ng-click="display.sortBy('name')">Sort By Name
+    <span class="sortorder" ng-show="display.propertyName === 'name'" ng-class="{reverse: display.reverse}"></span></button>
+
+  </div>
+  <div class="col-xs-6 col-sm-3">
+    <button class="btn col-xs-12 sort-button" ng-click="display.sortBy('culture')">Sort By Culture
+    <span class="sortorder" ng-show="display.propertyName === 'culture'" ng-class="{reverse: display.reverse}"></span></button>
+  </div>
+  <div class="col-xs-6 col-sm-3">
+    <button class="btn col-xs-12 sort-button" ng-click="display.sortBy('playedBy')">Sort By Actor
+    <span class="sortorder" ng-show="display.propertyName === 'playedBy'" ng-class="{reverse: display.reverse}"></span></button>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="row" id="top">
+  <div  id="dispButtons">
+      <div class="col-sm-4 center" >
+        <button class="btn col-xs-12 cust-button" id="bt1" ng-click="display.chooseView('books')">View All Books</button>
+      </div>
+      <div class="col-sm-4 center">
+        <button class="btn col-xs-12 cust-button" id="bt2" ng-click="display.chooseView('characters')">View All Characters</button>
+      </div>
+      <div class="col-sm-4 center">
+        <button class="btn col-xs-12 cust-button" id="bt3" ng-click="display.chooseView('houses')">View All Houses</button>
+      </div>
+  </div>
+
+  <show-book-sort ng-if="display.toDisplay=='books'"></show-book-sort>
+  <show-char-sort ng-if="display.toDisplay=='characters'"></show-char-sort>
+  <show-house-sort ng-if="display.toDisplay=='houses'"></show-house-sort>
+
+
+  <div class="row">
+    <h2 class="text-center" ng-if="display.toDisplay=='books'">All Books</h2>
+    <h2 class="text-center" ng-if="display.toDisplay=='characters'">All Characters</h2>
+    <h2 class="text-center" ng-if="display.toDisplay=='houses'">All Houses</h2>
+
+
+    <div ng-repeat="item in display.toBeDisplayedArray | filter: display.search | orderBy : display.propertyName: display.reverse | limitTo: display.limit">
+
+      <div ng-if="display.toDisplay=='books'" show-books></div>
+
+      <div ng-if="display.toDisplay=='characters'" show-characters></div>
+
+      <div ng-if="display.toDisplay=='houses'" show-houses></div>
+
+    </div>
+    <div class="col-xs-12 text-center margin-a">
+      <a href id="back" ng-if="display.limit < display.toBeDisplayedArray.length" ng-click="display.incrementLimit()">Load more</a>
+    </div>
+    </div>
+</div>

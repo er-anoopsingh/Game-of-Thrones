@@ -1,0 +1,77 @@
+<div class="col-xs-12 text-center margin-a">
+  <a href="" id="back" ng-click="singleChar.goBack()">Go back</a>
+</div>
+<div class="col-xs-12">
+        <div class="profile-card characters">
+            <div class="profile-info">
+                <div class="text-center">
+                  <h2>{{singleChar.character.name}}
+                    <span style="color: #D0CA9C;">{{singleChar.character.culture}}</span>
+                  </h2>
+              </div>
+
+                <div class="col-xs-12 detail" ng-if="singleChar.character.born">
+                  <div class="col-xs-6 text-right"><strong>Born: </strong></div><div class="col-xs-6">{{singleChar.character.born}}</div>
+                </div>
+
+                <div class="col-xs-12 detail"  ng-if="singleChar.character.culture">
+                  <div class="col-xs-6 text-right"><strong>Culture: </strong></div><div class="col-xs-6">{{singleChar.character.culture}}</div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleChar.character.gender">
+                  <div class="col-xs-6 text-right"><strong>Gender: </strong></div><div class="col-xs-6">{{singleChar.character.gender}}</div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleChar.character.father">
+                  <div class="col-xs-6 text-right"><strong>Father: </strong></div><div class="col-xs-6"><show-link prop="{{singleChar.character.father}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleChar.character.mother">
+                  <div class="col-xs-6 text-right"><strong>Mother: </strong></div><div class="col-xs-6"><show-link prop="{{singleChar.character.mother}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleChar.character.spouse">
+                  <div class="col-xs-6 text-right"><strong>Spouse: </strong></div><div class="col-xs-6"><show-link prop="{{singleChar.character.spouse}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleChar.character.died">
+                  <div class="col-xs-6 text-right"><strong>Died: </strong></div><div class="col-xs-6">{{singleChar.character.died}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.aliases[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Aliases: </strong></div><div class="col-xs-6">{{singleChar.character.aliases[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="alias in singleChar.character.aliases">{{alias}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.titles[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Titles: </strong></div><div class="col-xs-6">{{singleChar.character.titles[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="title in singleChar.character.titles">{{title}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.allegiances[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Allegiance: </strong></div><div class="col-xs-6"><show-link prop="{{singleChar.character.allegiances[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="allegiance in singleChar.character.allegiances"><show-link prop="{{allegiance}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.books[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Books: </strong></div><div class="col-xs-6"><show-link prop="{{singleChar.character.books[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="book in singleChar.character.books"><show-link prop="{{book}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.povBooks[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Pov Books: </strong></div><div class="col-xs-6"><show-link prop="{{singleChar.character.povBooks[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="book in singleChar.character.povBooks"><show-link prop="{{book}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.playedBy[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Played By: </strong></div><div class="col-xs-6">{{singleChar.character.playedBy[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="playedBy in singleChar.character.playedBy">{{playedBy}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleChar.character.tvSeries[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Tv Series: </strong></div><div class="col-xs-6">{{singleChar.character.tvSeries[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="tvSeries in singleChar.character.tvSeries">{{tvSeries}}</div>
+                </div>
+            </div>
+        </div>
+</div>

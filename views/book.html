@@ -1,0 +1,36 @@
+<div class="col-xs-12 text-center margin-a">
+  <a href="" id="back" ng-click="singleBook.goBack()">Go back</a>
+</div>
+<div class="col-xs-12">
+        <div class="profile-card ">
+            <div class="profile-info">
+              <div class="text-center">
+                <h2>{{singleBook.book.name}}
+                  <span ng-repeat="authors in singleBook.book.authors">{{authors}}</span>
+                </h2>
+              </div>
+              <div class="row">
+                <div class="col-xs-6 text-right"><strong>Pages: </strong></div><div class="col-xs-6">{{singleBook.book.numberOfPages}}</div>
+                <div class="col-xs-6 text-right"><strong>Country: </strong></div><div class="col-xs-6">{{singleBook.book.country}}</div>
+                <div class="col-xs-6 text-right"><strong>ISBN: </strong></div><div class="col-xs-6">{{singleBook.book.isbn}}</div>
+                <div class="col-xs-6 text-right"><strong>Type: </strong></div><div class="col-xs-6">{{singleBook.book.mediaType}}</div>
+                <div class="col-xs-6 text-right"><strong>Publisher: </strong></div><div class="col-xs-6">{{singleBook.book.publisher}}</div>
+                <div class="col-xs-6 text-right"><strong>Release Date: </strong></div><div class="col-xs-6">{{singleBook.book.released | date}}</div>
+                <div class="col-xs-6 text-right"><strong>Total Characters: </strong></div><div class="col-xs-6">{{singleBook.book.characters.length}}</div>
+
+                <div class="col-xs-12" ng-if="singleBook.book.characters[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Characters: </strong></div><div class="col-xs-6"><show-link prop="{{singleBook.book.characters[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="characters in singleBook.book.characters"><show-link prop="{{characters}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-6 text-right"><strong>Total Pov Characters: </strong></div><div class="col-xs-6">{{singleBook.book.povCharacters.length}}</div>
+
+                <div class="col-xs-12" ng-if="singleBook.book.povCharacters[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Pov Characters: </strong></div><div class="col-xs-6"><show-link prop="{{singleBook.book.povCharacters[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="characters in singleBook.book.povCharacters"><show-link prop="{{characters}}"></show-link></div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+</div>

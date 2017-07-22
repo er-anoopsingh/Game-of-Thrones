@@ -1,0 +1,73 @@
+<div class="col-xs-12 text-center margin-a">
+  <a href="" id="back" ng-click="singleHouse.goBack()">Go back</a>
+</div>
+<div class="col-xs-12">
+        <div class="profile-card houses">
+            <div class="profile-info">
+                <div class="text-center">
+                  <h2>{{singleHouse.house.name}}
+                    <span style="color: #D0CA9C;">{{singleHouse.house.region}}</span>
+                  </h2>
+              </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.founded">
+                  <div class="col-xs-6 text-right"><strong>Founded: </strong></div><div class="col-xs-6">{{singleHouse.house.founded}}</div>
+                </div>
+
+                <div class="col-xs-12 detail"  ng-if="singleHouse.house.founder">
+                  <div class="col-xs-6 text-right"><strong>Founder: </strong></div><div class="col-xs-6"><show-link prop="{{singleHouse.house.founder}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.coatOfArms">
+                  <div class="col-xs-6 text-right"><strong>Coat Of Arms: </strong></div><div class="col-xs-6">{{singleHouse.house.coatOfArms}}</div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.currentLord">
+                  <div class="col-xs-6 text-right"><strong>Lord: </strong></div><div class="col-xs-6"><show-link prop="{{singleHouse.house.currentLord}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.overlord">
+                  <div class="col-xs-6 text-right"><strong>Over lord: </strong></div><div class="col-xs-6"><show-link prop="{{singleHouse.house.overlord}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.heir">
+                  <div class="col-xs-6 text-right"><strong>Heir: </strong></div><div class="col-xs-6"><show-link prop="{{singleHouse.house.heir}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.diedOut">
+                  <div class="col-xs-6 text-right"><strong>Died out: </strong></div><div class="col-xs-6">{{singleHouse.house.diedOut}}</div>
+                </div>
+
+                <div class="col-xs-12 detail" ng-if="singleHouse.house.words">
+                  <div class="col-xs-6 text-right"><strong>Words: </strong></div><div class="col-xs-6">{{singleHouse.house.words}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleHouse.house.titles[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Titles: </strong></div><div class="col-xs-6">{{singleHouse.house.titles[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="titles in singleHouse.house.titles">{{titles}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleHouse.house.swornMembers[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Sworn Members: </strong></div><div class="col-xs-6"><show-link prop="{{singleHouse.house.swornMembers[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="swornMembers in singleHouse.house.swornMembers"><show-link prop="{{swornMembers}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleHouse.house.ancestralWeapons[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Ancestral Weapons: </strong></div><div class="col-xs-6">{{singleHouse.house.ancestralWeapons[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="ancestralWeapons in singleHouse.house.ancestralWeapons">{{ancestralWeapons}}</div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleHouse.house.cadetBranches[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Cadet Branches: </strong></div><div class="col-xs-6"><show-link prop="{{singleHouse.house.cadetBranches[0]}}"></show-link></div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="cadetBranches in singleHouse.house.cadetBranches"><show-link prop="{{cadetBranches}}"></show-link></div>
+                </div>
+
+                <div class="col-xs-12" ng-if="singleHouse.house.seats[0].length > 0">
+                  <div class="col-xs-6 text-right"><strong>Seats: </strong></div><div class="col-xs-6">{{singleHouse.house.seats[0]}}</div>
+                    <div class="col-xs-offset-6 col-xs-6 text-left" ng-if="!$first" ng-repeat="seats in singleHouse.house.seats">{{seats}}</div>
+                </div>
+
+
+            </div>
+        </div>
+</div>
