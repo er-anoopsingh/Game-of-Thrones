@@ -1,5 +1,5 @@
 # Game-of-Thrones
-An angularjs based website which interacts with an API to display all information about Game of Thrones
+### An angularjs based website which interacts with an API to display all information about Game of Thrones
 ===============
 
 This application demonstrates:
@@ -9,10 +9,6 @@ This application demonstrates:
 * Techniques for showing multiple views of data (card view and list view)
 * Custom filters for filtering customer and product data
 * A custom directive to resolve api returned links into angularjs links 
-
-The app is structured using the following folders:
-
-![Customer Management App Structure](CustomerManager/Content/images/appFolders.png)
 
 ## Requirements:
 
