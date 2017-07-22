@@ -1,2 +1,2 @@
 * linguist-vendored
-*.rb linguist-language=AngularJs
+*.js linguist-language=AngularJs
