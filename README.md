@@ -21,5 +21,5 @@ This application demonstrates:
 + Open [localhost:8080](localhost:8080) in a browser.
 
 ## GitHub:
-* You can visit the live website at 
+* You can visit the live website at https://er-anoopsingh.github.io/Game-of-Thrones/
 * You can view the source code at https://github.com/er-anoopsingh/Game-of-Thrones
