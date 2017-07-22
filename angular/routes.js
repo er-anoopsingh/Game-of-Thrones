@@ -20,4 +20,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
       controller: 'displayHouseCtrl',
       controllerAs: 'singleHouse'
     })
+    .otherwise({
+      redirectTo: '/'
+    })
 }]);
