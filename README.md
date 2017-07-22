@@ -4,71 +4,26 @@ An angularjs based website which interacts with an API to display all informatio
 
 This application demonstrates:
 
-* A complete application with read-only and editable data
-* Using AngularJS with $http in a factory to access a backend RESTful service
-* Using BreezeJS in a factory to access a backend RESTful Service
+* A complete application with read-only data with functionality of searching and sorting
+* Using AngularJS with $http in a factory to access an https://anapioficeandfire.com api
 * Techniques for showing multiple views of data (card view and list view)
 * Custom filters for filtering customer and product data
-* A custom directive to ensure unique values in a form for email 
-* A custom directive that intercepts $http and jQuery XHR requests (in case either are used) and displays a loading dialog
-* A custom directive that handles highlighting menu items automatically based upon the path navigated to by the user
-* Form validation using AngularJS
-* Provides login and authentication functionality (currently client-side only - plan to add server-side part too which is absolutely required in a "real" app)
-* A custom routing mechanism that allows a controller & template to be downloaded dynamically "on the fly" and provides a standard convention for controller and view names (see [this post](http://weblogs.asp.net/dwahlin/archive/2013/05/22/dynamically-loading-controllers-and-views-with-angularjs-and-requirejs.aspx)
- for more details)
+* A custom directive to resolve api returned links into angularjs links 
 
-The factories can be switched by changing the app/customersApp/services/config useBreeze setting to true.
-
-The AngularJS portion of the app is structured using the following folders:
+The app is structured using the following folders:
 
 ![Customer Management App Structure](CustomerManager/Content/images/appFolders.png)
 
 ## Requirements:
 
-### If you're using Visual Studio and .NET:
+### Setting up a server to host the app on your system (you can use any server of your choice):
 
-The following is required to support the backend services:
++ Verify that Node.js is installed. If you see anything when you run `which npm` in a terminal, it is. If not, follow the instructions at [nodejs.org](https://nodejs.org/en/) to install.
++ Install live-server: `npm install -g live-server`
++ Move your terminal to where your app directory is: `cd <path-to-content>`
++ Start the server: `live-server .`
++ Open [localhost:8080](localhost:8080) in a browser.
 
-* Visual Studio 2015 Community (free version) - https://www.visualstudio.com
-
-* ASP.NET MVC and Web API are used for the back-end services along with Entity Framework for database access (included if you have VS 2015 community installed with the LocalDB option selected)
-
-To get started, double-click the CustomerManager.sln file located at the root of the CustomerManager repository. Once the solution loads press F5 to run the project.
-
-Note: If you want to use Visual Studio 2013 that should work although you may have to change the connection string in web.config from "MSSqlLocalDB" to "v11.0" depending upon which version of LocalDB you have installed.
-
-### If you're using Node.js/Express/MongoDB
-
-If you don't already have Node.js on your machine install it from http://nodejs.org. You'll also need to install MongoDB from http://www.mongodb.org if you don't have it already and get it configured and running using the instructions on their site.
-
-In the CustomerManager directory execute 'npm install' to install Express, MongoDB and Mongoose (package.json).
-
-Load MongoDB Sample Data Option 1: 
-
-Load data into MongoDB by performing the following steps:
-
-* Execute 'mongod' to start the MongoDB daemon
-* Navigate to the CustomerManager/server directory (the one that has initMongoData.js in it)
-* Execute 'mongo' to start the MongoDB shell
-* Enter the following in the mongo shell to load the data seed file:
- * use customermanager
- * load("initMongoData.js")
-
-Load Sample Data Option 2: 
-
-Alternatively you can navigate to CustomerManager/server and double-click the initMongoData.bat (Windows) or initMongoData.sh (Mac/Linux) file to initialize MongoDB with the data. 
-
-The Windows script assumes that MongoDB is installed at c:\mongodb while the Linux/Mac script relies on the fact that you have the monogo executable
-in the path.
-
-Start the Node/Express server:
-
-* Open a command prompt
-* Navigate to the CustomerManager directory
-* Run 'npm install' at the command prompt
-* Navigate to the CustomerManager/server directory
-* Run 'node server.js'
-
-View the application at http://localhost:3000
-
-Thanks to [Tony Quinn](https://github.com/tonyq) for contributing the initial Node.js/MongoDB code!
+## GitHub:
+* You can visit the live website at 
+* You can view the source code at https://github.com/er-anoopsingh/Game-of-Thrones
