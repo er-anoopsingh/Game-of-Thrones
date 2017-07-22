@@ -1,2 +1,2 @@
 * linguist-vendored
-angular.min.js linguist-vendored=false
+*.rb linguist-language=AngularJs
