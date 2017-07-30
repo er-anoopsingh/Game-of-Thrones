@@ -7,7 +7,7 @@ This application demonstrates:
 * A complete application with read-only data with functionality of searching and sorting
 * Using AngularJS with $http in a factory to access an https://anapioficeandfire.com api
 * Techniques for showing multiple views of data (card view and list view)
-* Custom filters for filtering customer and product data
+* Custom filters for filtering based on Name, No. of pages etc.
 * A custom directive to resolve api returned links into angularjs links 
 
 ## Requirements:
