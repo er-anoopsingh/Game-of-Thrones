@@ -19,7 +19,6 @@ myApp.directive('showLink',['getDataFactory',function(getDataFactory){
         var id = url.substring(idx + "/houses/".length,url.length); // extracts id from url
 
         getDataFactory.getSingleHouse(id).then(function(response){
-          console.log(response.data.name);
           elem.append("<a class='resLink' href='#!house/" + id+ "'>" + response.data.name + "</a>");
         });
       }
@@ -28,7 +27,6 @@ myApp.directive('showLink',['getDataFactory',function(getDataFactory){
         var id = url.substring(idx + "/characters/".length,url.length);// extracts id from url
 
         getDataFactory.getSingleCharacter(id).then(function(response){ //calls factory method with id to get data
-          console.log(response.data.name);
           elem.append("<a class='resLink' href='#!character/" + id+ "'>" + response.data.name + "</a>"); // appends the name with link to it's detailed page
         });
       }
@@ -37,7 +35,6 @@ myApp.directive('showLink',['getDataFactory',function(getDataFactory){
         var id = url.substring(idx + "/books/".length,url.length);// extracts id from url
 
         getDataFactory.getSingleBook(id).then(function(response){
-          console.log(response.data.name);
           elem.append("<a class='resLink' href='#!book/" + id+ "'>" + response.data.name + "</a>");
         });
       }

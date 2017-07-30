@@ -1,7 +1,7 @@
 <div class="col-sm-6">
         <div class="profile-card">
             <div class="profile-info profile-h text-center">
-              <a ng-href="#!/book/{{$index + 1}}">
+              <a href="" ng-click="display.goToBook(item.url)">
                 <h2 class="hvr-underline-from-center">{{item.name}}
                   <span class="char" ng-repeat="authors in item.authors">{{authors}}</span>
                 </h2>

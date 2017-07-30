@@ -7,7 +7,7 @@ myApp.controller('displayAllCtrl',['getDataFactory','$location','$scope', functi
 
   var getBooks = function(){ // to store all the books
     self.toBeDisplayedArray = [];
-    self.toBeDisplayedArray = [] = getDataFactory.allBooks;
+    self.toBeDisplayedArray = getDataFactory.allBooks;
     }
 
   var getCharacters = function() {// to store all the characters
@@ -36,6 +36,11 @@ myApp.controller('displayAllCtrl',['getDataFactory','$location','$scope', functi
       if(toDisplay === 'houses'){
         getHouses();
       }
+  }
+
+  self.goToBook= function(url){ // function to go to specific character called from show-charcters.html
+    var bookId = url.match(/(\d+)/)[0]; // fetch the character id
+    $location.path('/book/' + bookId); // go to specific page
   }
 
   self.goToChar = function(url){ // function to go to specific character called from show-charcters.html
